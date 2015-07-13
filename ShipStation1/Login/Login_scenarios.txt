@@ -1,0 +1,20 @@
+*** Settings ***
+Suite Teardown    Close All Browsers
+Library           Selenium2Library
+Resource          ../commonresource.txt
+
+*** Test Cases ***
+validLogin
+    Open Browser    ${Url}    ${Browser}
+    Maximize Browser Window
+    Set Selenium Speed    ${Delay}
+    Execute Javascript    window.focus();
+    Wait Until Page Contains Element    id=username    ${Timeout}    Login page not displayed after entering Url.
+    Focus    id=username
+    Input Text    id=username    @{UsernamePassword}[0]
+    Focus    id=password
+    Input Text    id=password    @{UsernamePassword}[1]
+    Click Element    id=btn-login
+    Wait Until Page Contains Element    link=×    ${Timeout}    Dashboard page not opened successfully.
+
+*** Keywords ***

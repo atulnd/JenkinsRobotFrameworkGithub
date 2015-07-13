@@ -1,0 +1,14 @@
+*** Settings ***
+Library           Selenium2Library
+Library           Collections
+Library           String
+Library           OperatingSystem
+
+*** Variables ***
+${Url}            http://stage.shipstation.com/
+${Browser}        firefox
+${Timeout}        100
+@{UsernamePassword}    qacheck16@gmail.com    alohatest
+${Delay}          0.3
+
+*** Keywords ***
