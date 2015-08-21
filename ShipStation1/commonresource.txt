@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     This file contains all require configurations7
+Documentation     This file contains all require configurations8
 Library           Selenium2Library
 Library           Collections
 Library           String
