@@ -6,7 +6,7 @@ Resource          ../commonresource.txt
 
 *** Test Cases ***
 validLogin
-    [Documentation]    Valid login scenario
+    [Documentation]    Valid login scenario testcase
     Open Browser    ${Url}    ${Browser}
     Maximize Browser Window
     Set Selenium Speed    ${Delay}
